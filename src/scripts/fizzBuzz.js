@@ -8,6 +8,8 @@ let response = {
         result : ''
     }
 }
+number = parseInt(number);
+
 if (isNaN(number)|| number < 0) {
     response.status = 'error';
     response.message = 'Invalid input';
