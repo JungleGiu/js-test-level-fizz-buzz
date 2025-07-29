@@ -5,8 +5,8 @@ export const fizzBuzz = (number) => {
     status: "",
     message: "",
     data: {
-      number: 0,
-      result: "",
+      input: 0,
+      output: "",
     },
   };
   number = parseInt(number);
@@ -17,6 +17,7 @@ export const fizzBuzz = (number) => {
     response.data.input = number;
     response.data.output = "Invalid Input";
     allResults.push(response);
+    console.error(response.message);
     return response;
   }
   if (number % 3 === 0 && number % 5 === 0) {

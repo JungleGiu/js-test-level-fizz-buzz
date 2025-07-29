@@ -1,5 +1,6 @@
 import { expect, describe, test } from "@jest/globals";
 import { fizzBuzz } from "../src/scripts/fizzBuzz";
+import { printHistory, printResult, resetResultContent } from "../src/scripts/dom";
 
 describe("FizzBuzz test for multiples of 3 and 5", () => {
   test("returns Fizz when multiple of 3", () => {
@@ -65,4 +66,19 @@ describe("FizzBuzz test for multiples of 3 and 5", () => {
     expect(resultado).toEqual(respuesta_esperada);
     expect(resultado.data.output).toBe(8);
   });
+  test("returns error when input is not a number", () => {
+    let valor_entrada = "a";
+    let respuesta_esperada = {
+      status: "error",
+      message: "Invalid input",
+      data: {
+        input: NaN,
+        output: "Invalid Input",
+      },
+    };
+    let resultado = fizzBuzz(valor_entrada);
+    expect(typeof resultado.data.input).toBe("number");
+    expect(resultado).toEqual(respuesta_esperada);
+    expect(resultado.data.output).toBe("Invalid Input");
+  })
 });

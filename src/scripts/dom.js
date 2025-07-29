@@ -1,6 +1,6 @@
 const resultDiv = document.getElementById("result");
 
-export const printResult = (result) => {
+export  const printResult = (result) => {
   resetResultContent();
   resultDiv.style.display = "flex";
   resultDiv.style.justifyContent = "center";
