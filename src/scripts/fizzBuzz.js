@@ -5,11 +5,11 @@ export const fizzBuzz = (number) => {
     status: "",
     message: "",
     data: {
-      number: 0,
-      result: "",
+      input: 0,
+      output: "",
     },
   };
-  number = parseInt(number);
+number = parseInt(number);
 
   if (isNaN(number) || number < 0) {
     response.status = "error";
