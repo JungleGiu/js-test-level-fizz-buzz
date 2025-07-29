@@ -11,7 +11,7 @@ export  const printResult = (result) => {
 
 export const printHistory = (results) => {
     resultDiv.textContent = "";
-    resultDiv.style.display = "flex";
+    resultDiv.style.display = "flex-wrap";
     resultDiv.style.justifyContent = "center";
     resultDiv.style.gap = "20px";
   results.forEach((result) => {
