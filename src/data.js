@@ -1,1 +1,1 @@
-export const allResults = []
+export let allResults = []
