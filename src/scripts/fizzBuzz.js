@@ -1,12 +1,45 @@
-/**
- * Responsabilidad: gestionar la lógica de FizzBuzz
- * Recuerda que la estructura de las respuestas debe ser estructurada:
- *  {
-        status: "", // Código indicando éxito o error
-        message: "", // Mensaje
-        data: {
-            number: 0, // Número evaluado
-            result: "" // Resultado esperado
-            }
+
+    export const fizzBuzz = (number) => {
+let response = {
+    status : '',
+    message :'',
+    data :{
+        number: 0,
+        result : ''
     }
- * */ 
+}
+if (isNaN(number)|| number < 0) {
+    response.status = 'error';
+    response.message = 'Invalid input';
+    response.data.number = number;
+    response.data.result = 'Invalid input';
+    return response;
+}
+if (number % 3 === 0 && number % 5 === 0) {
+    response.status = 'ok';
+    response.message = 'The number is divisible by 3 and 5';
+    response.data.number = number;
+    response.data.result = 'FizzBuzz';
+    return response;
+}
+if (number % 3 === 0) {
+    response.status = 'ok';
+    response.message = 'The number is divisible by 3';
+    response.data.number = number;
+    response.data.result = 'Fizz';
+    return response;
+}
+if (number % 5 === 0) {
+    response.status = 'ok';
+    response.message = 'The number is divisible by 5';
+    response.data.number = number;
+    response.data.result = 'Buzz';
+    return response;
+}
+response.status = 'ok';
+response.message = 'The number is not divisible by 3 or 5';
+response.data.number = number;
+response.data.result = number;
+return response;
+
+    }
