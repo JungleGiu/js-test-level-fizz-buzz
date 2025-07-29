@@ -1,10 +1,11 @@
-import { printResult } from "./dom";
-import { fizzBuzz } from "./fizzBuzz";
+import { printResult } from "./dom.js";
+import { fizzBuzz } from "./fizzBuzz.js";
 
-const from = document.getElementsById("fizzBuzzForm");
-const input = document.getElementsById("number-input").value;
-
+const from = document.getElementById("fizzBuzzForm");
+const input = document.getElementById("number-input");
 from.addEventListener("submit", (e) => {
     e.preventDefault();
-    printResult(fizzBuzz(input));
+    const inputValue = input.value;
+    const result = fizzBuzz(inputValue);
+    printResult(result);
 });
