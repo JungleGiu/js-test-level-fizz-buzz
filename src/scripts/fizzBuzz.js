@@ -12,8 +12,8 @@ export const fizzBuzz = (number) => {
   if (isNaN(number) || number < 0) {
     response.status = "error";
     response.message = "Invalid input";
-    response.data.number = number;
-    response.data.result = "Invalid input";
+    response.data.input = number;
+    response.data.output = "Invalid Input";
     return response;
   }
   if (number % 3 === 0 && number % 5 === 0) {
