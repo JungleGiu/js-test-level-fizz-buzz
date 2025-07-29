@@ -1,4 +1,5 @@
 import { expect, describe, test } from "@jest/globals";
+
 import { fizzBuzz } from "../src/scripts/fizzBuzz";
 import { printHistory, printResult, resetResultContent } from "../src/scripts/dom";
 
