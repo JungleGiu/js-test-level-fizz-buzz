@@ -1,20 +1,19 @@
+export const fizzBuzz = (number) => {
+  let response = {
+    status: "",
+    message: "",
+    data: {
+      number: 0,
+      result: "",
+    },
+  };
+  number = parseInt(number);
 
-    export const fizzBuzz = (number) => {
-let response = {
-    status : '',
-    message :'',
-    data :{
-        number: 0,
-        result : ''
-    }
-}
-number = parseInt(number);
-
-if (isNaN(number)|| number < 0) {
-    response.status = 'error';
-    response.message = 'Invalid input';
+  if (isNaN(number) || number < 0) {
+    response.status = "error";
+    response.message = "Invalid input";
     response.data.number = number;
-    response.data.result = 'Invalid input';
+    response.data.result = "Invalid input";
     return response;
   }
   if (number % 3 === 0 && number % 5 === 0) {
