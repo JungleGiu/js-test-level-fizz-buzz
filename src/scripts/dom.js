@@ -1,6 +1,6 @@
 const resultDiv = document.getElementById("result");
 
-export const printResult = (result) => {
+export  const printResult = (result) => {
   resetResultContent();
   resultDiv.style.display = "flex";
   resultDiv.style.justifyContent = "center";
@@ -11,7 +11,7 @@ export const printResult = (result) => {
 
 export const printHistory = (results) => {
     resultDiv.textContent = "";
-    resultDiv.style.display = "flex";
+    resultDiv.style.display = "flex-wrap";
     resultDiv.style.justifyContent = "center";
     resultDiv.style.gap = "20px";
   results.forEach((result) => {

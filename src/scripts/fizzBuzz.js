@@ -17,6 +17,8 @@ number = parseInt(number);
     response.data.input = number;
     response.data.output = "Invalid Input";
     allResults.push(response);
+    console.error(response.message);
+    alert(response.message);
     return response;
   }
   if (number % 3 === 0 && number % 5 === 0) {
