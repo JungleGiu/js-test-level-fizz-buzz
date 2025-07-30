@@ -84,3 +84,16 @@ describe("FizzBuzz test for multiples of 3 and 5", () => {
   })
 });
 
+describe (" Print result", () => {
+    test("should print the result to last input", () => {
+        let input = document.querySelector("#input-number");
+        let result = fizzBuzz(input.value);
+        let resultDiv = document.getElementById("result");
+        printResult(result);
+
+        expect(resultDiv.children.length).toBe(1);
+        expect(resultDiv.children[0].textContent).toBe(result.data.output);
+        expect(resultDiv.children[0].tagName).toBe("H1");
+        expect(resultDiv.children[0].innerHTML).toContain(result.data.output);
+    })
+})

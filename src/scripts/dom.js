@@ -10,10 +10,8 @@ export  const printResult = (result) => {
 };
 
 export const printHistory = (results) => {
-    resultDiv.textContent = "";
-    resultDiv.style.display = "flex-wrap";
-    resultDiv.style.justifyContent = "center";
-    resultDiv.style.gap = "20px";
+  resetResultContent();
+  
   results.forEach((result) => {
     let newResult = document.createElement("div");
     let status = document.createElement("p");
